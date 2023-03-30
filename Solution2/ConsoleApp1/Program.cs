@@ -16,9 +16,13 @@
                 Console.WriteLine("3. Search User");
                 Console.WriteLine("4. Login User");
                 Console.WriteLine("5. Exit");
+                
+
+
 
                 Console.Write("Operation: ");
                 string operation = Console.ReadLine();
+                Console.Clear();
 
                 switch (operation)
                 {
@@ -42,6 +46,7 @@
                         break;
                 }
                 Console.WriteLine("Invalid input. Please try again.");
+               
             }
         }
 
@@ -58,7 +63,7 @@
             string password = Console.ReadLine();
             Console.WriteLine("\nData user berhasil dibuat\n");
 
-         }
+        }
        
         static void ShowUser()
         {

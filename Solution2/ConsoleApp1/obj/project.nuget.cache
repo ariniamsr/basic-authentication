@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "a93W//LXqU0suEGv7rq/fKcGtYRYAIB9ipsXaqk2jRvqMRAA6XU3cR1D6YuKvsoi4nkldu1bK7Xx5ic06D3Aqw==",
+  "dgSpecHash": "2xuTwy+LM7nH1+d6JN878IOEs4M/o206ly6loMIS/hdb8Wrs7FYMRD/V+RZOx7BGnAMvOjh1omq1seGhv4bPxw==",
   "success": true,
-  "projectFilePath": "E:\\FDS\\basic-authenticationn\\Solution2\\ConsoleApp1\\ConsoleApp1.csproj",
+  "projectFilePath": "E:\\FDS\\basic-authentication\\Solution2\\ConsoleApp1\\ConsoleApp1.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

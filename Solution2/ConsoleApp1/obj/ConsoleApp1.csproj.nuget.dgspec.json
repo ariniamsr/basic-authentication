@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\FDS\\basic-authenticationn\\Solution2\\ConsoleApp1\\ConsoleApp1.csproj": {}
+    "E:\\FDS\\basic-authentication\\Solution2\\ConsoleApp1\\ConsoleApp1.csproj": {}
   },
   "projects": {
-    "E:\\FDS\\basic-authenticationn\\Solution2\\ConsoleApp1\\ConsoleApp1.csproj": {
+    "E:\\FDS\\basic-authentication\\Solution2\\ConsoleApp1\\ConsoleApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\FDS\\basic-authenticationn\\Solution2\\ConsoleApp1\\ConsoleApp1.csproj",
+        "projectUniqueName": "E:\\FDS\\basic-authentication\\Solution2\\ConsoleApp1\\ConsoleApp1.csproj",
         "projectName": "ConsoleApp1",
-        "projectPath": "E:\\FDS\\basic-authenticationn\\Solution2\\ConsoleApp1\\ConsoleApp1.csproj",
+        "projectPath": "E:\\FDS\\basic-authentication\\Solution2\\ConsoleApp1\\ConsoleApp1.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "E:\\FDS\\basic-authenticationn\\Solution2\\ConsoleApp1\\obj\\",
+        "outputPath": "E:\\FDS\\basic-authentication\\Solution2\\ConsoleApp1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",

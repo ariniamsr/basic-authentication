@@ -1,9 +1,35 @@
-﻿class Program
+﻿using System;
+using System.Security.Cryptography.X509Certificates;
+
+class User
 {
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public string UserName { get; set; }
+    public string Password { get; set; }
+    public User(string firstName, string lastName, string password)
+    {
+        FirstName = firstName;
+        LastName = lastName;
+        Password = password;
+        UserName = $"{firstName[..2]} {lastName[..2]}";
+
+    }
+
+    public string GetUserData()
+    {
+        return $"Full Name : {FirstName} {LastName} \n" +
+               $"User Name : {UserName} \n" +
+               $"Password  : {Password}";
+    }
+}
+
+class Program
+{
+    static List<User> users = new List<User>();
     static void Main(string[] args)
-    {        
-           
-        
+    {
+
         while (true)
         {
 
@@ -16,11 +42,8 @@
                 Console.WriteLine("3. Search User");
                 Console.WriteLine("4. Login User");
                 Console.WriteLine("5. Exit");
-                
 
-
-
-                Console.Write("Operation: ");
+                Console.Write("Input: ");
                 string operation = Console.ReadLine();
                 Console.Clear();
 
@@ -45,8 +68,8 @@
                         Console.WriteLine("Invalid operation. Please try again.");
                         break;
                 }
-                Console.WriteLine("Invalid input. Please try again.");
-               
+
+
             }
         }
 
@@ -63,34 +86,42 @@
             string password = Console.ReadLine();
             Console.WriteLine("\nData user berhasil dibuat\n");
 
+            string UserName = (firstName[..2]) + (lastName[..2]);
+            User user = new User(firstName, lastName, password);
+            users.Add(user);
+            Console.WriteLine("User sudah berhasil ditambahkan");
         }
-       
+
+
         static void ShowUser()
         {
-           
-            Console.WriteLine("ID");
-            Console.WriteLine("Name");           
-            Console.WriteLine("Username");       
-            Console.WriteLine("Password");
-            
-              
 
+            var count = 0;
+            foreach (var user in users)
+            {
+                Console.WriteLine("Id : " + count++);
+                Console.WriteLine(user.GetUserData());
+                Console.WriteLine("=========================");
+            }
             Console.ReadLine();
-            Console.Clear();
-
         }
 
         static void SearchUser()
         {
             Console.WriteLine("==Cari Akun==");
             Console.Write("Enter first name: ");
-            string firstName = Console.ReadLine();
+            string name = Console.ReadLine();
 
-            Console.WriteLine("ID");
-            Console.WriteLine("Name");
-            Console.WriteLine("Username");
-            Console.WriteLine("Password");
-            Console.Clear();
+
+            foreach (User user in users)
+            {
+                Console.WriteLine("ID: " + user.UserName);
+                Console.WriteLine("Name " + user.FirstName);
+                Console.WriteLine("Username " + user.UserName);
+                Console.WriteLine("Password " + user.Password);
+
+            }
+            Console.ReadLine();
 
         }
 
@@ -105,32 +136,24 @@
             Console.Write("Enter Password: ");
             string Password = Console.ReadLine();
 
-            Console.WriteLine("LoginBerhasil");
-            Console.Clear();
+            if (LoginUser != null)
+            {
+                Console.WriteLine("Login Berhasil ");
+            }
+            else
+            {
+                Console.WriteLine("Login Gagal");
+            }
+
 
         }
 
         static void Exit()
         {
             Console.WriteLine("Exit");
-            Console.Clear();
-        }
-        {
-            Console.Clear();    
+
+
         }
 
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
